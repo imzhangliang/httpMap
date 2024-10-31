@@ -1,5 +1,6 @@
 // app.js
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
@@ -7,6 +8,7 @@ const map = {
 }
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Express server!');
